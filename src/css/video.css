@@ -1,0 +1,53 @@
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* fr é unidade fracional, é como se tivesse dividindo em 33% (3 partes) */
+    max-width: 780px;
+    margin: 20px 90px;
+    width: 100%;
+    gap: 20px; /* Espaçamento entre os itens */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.grid1 div {
+    text-align: center;
+    background-color: #003333; /* Fundo verde escuro */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 530px; /* Aumenta a largura dos quadrados */
+    display: flex; /* Centraliza o conteúdo */
+    flex-direction: column; /* Centraliza o texto e a imagem verticalmente */
+    justify-content: space-between; /* Mantém espaço entre imagem e texto */
+}
+
+.grid1 img {
+    width: 100%; /* A imagem ocupa toda a largura do item */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+.grid1 p {
+    text-align: center;
+    font-size: 1rem; /* Tamanho do texto */
+    font-style: oblique;
+    font-weight: bold;
+    color: white; /* Texto branco */
+    font-family: Arial, sans-serif; /* Fonte limpa e legível */
+}
+
+.grid1 > div:nth-child(n) {
+    border-style: solid;
+    border-radius: 5%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #003232;
+}
+
+@media (max-width: 800px) {
+    main {
+        display: inline-block;
+    }
+    
+    .grid1 img {
+        width: 100%;
+    }
+}
