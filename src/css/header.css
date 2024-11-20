@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu li {
+    margin: 0 10px;
+  }
+  
+  .efeito {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }

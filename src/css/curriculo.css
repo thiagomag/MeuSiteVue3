@@ -1,0 +1,40 @@
+/* Estilize conforme o conteúdo original em curriculo.css */
+.curriculo {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  
+  .curriculo2 {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .curriculo2 h1,
+  .curriculo2 h2 {
+    color: #003366;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  dl dt {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  dl dd {
+    margin-left: 20px;
+  }
+  

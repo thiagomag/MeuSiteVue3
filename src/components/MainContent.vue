@@ -24,16 +24,6 @@
   </script>
   
   <style scoped>
-  .principal {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .imagem-principal img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+  @import '@/css/maincontent.css';
   </style>
   

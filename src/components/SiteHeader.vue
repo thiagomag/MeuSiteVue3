@@ -2,7 +2,9 @@
 <template>
     <header>
       <div class="header">
-        <img src="@/assets/imagens/logo.jpg" alt="Logo" />
+      <router-link to="/">
+        <img src="@/assets/imagens/logo.jpg" alt="Logo" class="logo" />
+      </router-link>
         <nav>
           <ul class="menu">
             <li><button type="button" class="efeito"><router-link to="/">Home</router-link></button></li>
@@ -23,26 +25,6 @@
   </script>
   
   <style scoped>
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-  }
-  
-  .menu li {
-    margin: 0 10px;
-  }
-  
-  .efeito {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+  @import '@/css/header.css';
   </style>
   
