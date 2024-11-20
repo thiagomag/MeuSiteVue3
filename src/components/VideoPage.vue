@@ -1,30 +1,30 @@
 <template>
-    <main>
-      <section class="grid2">
-        <div class="video">
-          <iframe
+  <main>
+    <section class="grid2">
+      <div class="video">
+        <iframe
             :src="video.videoUrl"
             width="100%"
             height="500"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
-          <h2>{{ video.title }}</h2>
+        ></iframe>
+        <h2>{{ video.title }}</h2>
+      </div>
+      <div class="sidebar" v-if="video && video.sidebar">
+        <div v-for="(link, index) in video.sidebar" :key="index">
+          <a :href="link.url"><img :src="link.image" :alt="link.title"/></a>
+          <p>{{ link.title }}</p>
         </div>
-        <div class="sidebar" v-if="video && video.sidebar">
-          <div v-for="(link, index) in video.sidebar" :key="index">
-            <a :href="link.url"><img :src="link.image" :alt="link.title" /></a>
-            <p>{{ link.title }}</p>
-          </div>
-        </div>
+      </div>
 
-      </section>
-    </main>
-  </template>
-  
-  <script>
-import { videos, sidebarLinks } from "@/data/videoData";
+    </section>
+  </main>
+</template>
+
+<script>
+import {videos, sidebarLinks} from "@/data/videoData";
 
 export default {
   name: "VideoPage",
@@ -49,8 +49,8 @@ export default {
   },
 };
 </script>
-  
+
 <style scoped>
-@import "@/css/videopage.css";  
+@import "@/css/videopage.css";
 </style>  
   

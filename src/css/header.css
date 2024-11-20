@@ -3,19 +3,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-  }
-  
-  .menu {
+}
+
+.menu {
     display: flex;
     list-style: none;
-  }
-  
-  .menu li {
+}
+
+.menu li {
     margin: 0 10px;
-  }
-  
-  .efeito {
+}
+
+.efeito {
     background: none;
     border: none;
     cursor: pointer;
-  }
+}

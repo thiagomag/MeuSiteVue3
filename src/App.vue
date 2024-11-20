@@ -1,11 +1,11 @@
 <!-- src/App.vue -->
 <template>
   <div id="app">
-    <Header />
+    <Header/>
     <main class="content">
-      <router-view />
+      <router-view/>
     </main>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -29,6 +29,7 @@ export default {
   flex-direction: column;
   min-height: 100vh; /* Altura mínima para ocupar toda a tela */
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
 }

@@ -3,7 +3,7 @@
     <section class="grid1">
       <div v-for="(video, index) in videos2" :key="index">
         <router-link :to="`/video/${video.id}`">
-          <img :src="video.image" :alt="video.title" />
+          <img :src="video.image" :alt="video.title"/>
         </router-link>
         <p>{{ video.title }}</p>
       </div>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { videos2 } from "@/data/videoData"; // Importa videos2 de forma explícita
+import {videos2} from "@/data/videoData"; // Importa videos2 de forma explícita
 
 export default {
   name: "SiteVideos",

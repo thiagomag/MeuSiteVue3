@@ -6,35 +6,35 @@ footer {
     overflow-x: hidden; /* Remove possíveis excessos horizontais */
     box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
     position: relative;
-  }
-  
-  .icones {
+}
+
+.icones {
     display: flex;
     justify-content: center; /* Centraliza os ícones */
     align-items: center;
     list-style: none; /* Remove os marcadores da lista */
     margin: 0;
     padding: 0; /* Remove padding extra */
-  }
-  
-  .icones li {
+}
+
+.icones li {
     margin: 0 10px; /* Espaçamento horizontal entre os ícones */
-  }
-  
-  .icones a {
+}
+
+.icones a {
     display: inline-block;
     text-decoration: none;
     color: white; /* Cor dos ícones */
-  }
-  
-  .icones a i {
+}
+
+.icones a i {
     font-size: 2rem; /* Ajuste o tamanho dos ícones */
-  }
-  
-  body, html {
+}
+
+body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Garante que não haja rolagem horizontal no corpo */
     width: 100%; /* Garante que o layout ocupe 100% da largura */
     box-sizing: border-box;
-  }
+}
