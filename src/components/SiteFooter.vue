@@ -6,26 +6,26 @@
     </p>
     <ul class="icones">
       <li>
-        <a href="https://www.facebook.com/thiagomagdalena" target="_blank"
-        ><i class="fab fa-facebook-square fa-2x"></i
-        ></a>
+        <a href="https://www.facebook.com/thiagomagdalena" target="_blank">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
       </li>
       <li>
-        <a href="https://twitter.com/thiagomagdalena" target="_blank"
-        ><i class="fab fa-twitter-square fa-2x"></i
-        ></a>
+        <a href="https://github.com/thiagomag" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
       </li>
       <li>
         <a
             href="https://www.linkedin.com/in/thiago-de-oliveira-magdalena-4bb44436/"
-            target="_blank"
-        ><i class="fab fa-linkedin fa-2x"></i
-        ></a>
+            target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
       </li>
       <li>
-        <a href="https://wa.me/5524992713672" target="_blank"
-        ><i class="fab fa-whatsapp-square fa-2x"></i
-        ></a>
+        <a href="https://wa.me/5524992713672" target="_blank">
+          <i class="fab fa-whatsapp-square fa-2x"></i>
+        </a>
       </li>
     </ul>
   </footer>

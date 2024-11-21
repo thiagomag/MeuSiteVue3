@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { videos as localVideos } from "@/data/videoData"; // Importa os dados locais como fallback
+
 export default {
   name: "SiteVideos",
   data() {
@@ -24,14 +26,17 @@ export default {
   },
   async created() {
     try {
-      // Chama a API para buscar os vídeos
+      // Tenta buscar os vídeos da API
       const response = await fetch("http://localhost:8081/meu-site-backend/videos");
       if (!response.ok) {
         throw new Error("Erro ao buscar vídeos da API.");
       }
-      this.videos = await response.json();
+      this.videos = await response.json(); // Define os dados da API
     } catch (err) {
-      this.error = `Erro: ${err.message}`;
+      // Caso a API falhe, utiliza os dados locais
+      console.error("Erro ao buscar dados da API, usando dados locais:", err);
+      this.videos = localVideos;
+      this.error = "Exibindo dados locais devido a um erro na API.";
     } finally {
       this.loading = false;
     }
