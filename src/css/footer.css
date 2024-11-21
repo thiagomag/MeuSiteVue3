@@ -1,11 +1,14 @@
 footer {
     text-align: center;
-    background-color: #333;
+    background: #2B474C;
     color: #fff;
     padding: 20px;
     overflow-x: hidden; /* Remove possíveis excessos horizontais */
     box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
     position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .icones {

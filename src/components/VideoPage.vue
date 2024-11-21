@@ -1,19 +1,20 @@
 <template>
   <main>
-    <section class="grid2">
-      <div class="video">
+    <section class="grid3">
+      <div v-if="loading">Carregando vídeo...</div>
+      <div v-else-if="error">{{ error }}</div>
+      <div v-else>
         <iframe
-            :src="video.videoUrl"
-            width="100%"
-            height="500"
-            frameborder="0"
+            :src="video.video_url"
+            width="130%"
+            height="50%"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
         ></iframe>
         <h2>{{ video.title }}</h2>
       </div>
-      <div class="sidebar" v-if="video && video.sidebar">
-        <div v-for="(link, index) in video.sidebar" :key="index">
+      <div class="sidebar" v-if="sidebarLinks">
+        <div v-for="(link, index) in sidebarLinks" :key="index">
           <a :href="link.url"><img :src="link.image" :alt="link.title"/></a>
           <p>{{ link.title }}</p>
         </div>
@@ -24,28 +25,37 @@
 </template>
 
 <script>
-import {videos, sidebarLinks} from "@/data/videoData";
-
 export default {
   name: "VideoPage",
-  props: ["id"],
+  props: ["id"], // O ID do vídeo é passado como prop pela rota
   data() {
     return {
       video: null, // Dados do vídeo atual
-      filteredSidebarLinks: [], // Links filtrados para a barra lateral
+      sidebarLinks: [], // Links para a barra lateral
+      loading: true, // Indica se os dados estão carregando
+      error: null, // Armazena erros
     };
   },
-  created() {
-    // Busca o vídeo correspondente ao ID
-    this.video = videos.find((video) => video.id === this.id);
+  async created() {
+    try {
+      // Busca os detalhes do vídeo
+      const response = await fetch(`http://localhost:8081/meu-site-backend/videos/${this.id}`);
+      if (!response.ok) {
+        throw new Error("Erro ao carregar os dados do vídeo.");
+      }
+      this.video = await response.json();
 
-    if (!this.video) {
-      console.error(`Vídeo com ID "${this.id}" não encontrado.`);
-      return;
+      // Exemplo: Obtendo links para a barra lateral
+      const allVideosResponse = await fetch("http://localhost:8081/meu-site-backend/videos");
+      if (allVideosResponse.ok) {
+        const allVideos = await allVideosResponse.json();
+        this.sidebarLinks = allVideos.filter((v) => v.slug !== this.id);
+      }
+    } catch (err) {
+      this.error = err.message;
+    } finally {
+      this.loading = false;
     }
-
-    // Adiciona a barra lateral ao vídeo, excluindo o vídeo atual
-    this.video.sidebar = sidebarLinks.filter((link) => link.url !== `/video/${this.id}`);
   },
 };
 </script>

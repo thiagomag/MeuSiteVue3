@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="grid1">
+    <section class="grid2">
       <div v-for="(link, index) in links" :key="index">
         <a :href="link.url" target="_blank">
           <img :src="link.image" :alt="link.title"/>

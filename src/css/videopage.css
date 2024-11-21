@@ -1,4 +1,4 @@
-.grid2 {
+.grid3 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
